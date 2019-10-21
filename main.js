@@ -44,15 +44,30 @@ Create two computers object from your factory function and save them in one arra
 
 Note: please write one or two lines here describing your solution.
 */
-
+ var computer1 = {
+  type :'hp',
+  color :'black',
+   weight : '2kg'
+ } ;
+  var computer2 = {
+   type : 'dell',
+   color :  'red',
+   weight : '3kg'
+    };
 function makeComputer(type, color, weight) {
   // TODO: Your code here
+ return {
+  type : type ,
+  color : color ,
+  weight : weight
+ };
 }
 
 // Write a function displayComputer that can be used to display one computer.
 
 function displayComputer(computer) {
   // TODO: Your code here
+  return computer1.type + ' ' + computer1.color + ' ' + computer.weight
 }
 
 //=============================================================================
@@ -74,6 +89,9 @@ uppercaseAll(strArr); ==> [ 'HELLO', 'WORLD', 'WHIRLED', 'PEAS' ]
 
 function uppercaseAll(arrayOfStrings) {
   // TODO: your code here
+  return map(arrayOfStrings , function(element , i){
+    return element.toUpperCase()
+  })
 }
 
 //=============================================================================
@@ -113,6 +131,11 @@ var data = [
 
 function highestPopulation(arrayOfObjects) {
   // TODO: your code here
+  return filter(arrayOfObjects , function(element){
+    console.log(element.population)
+  return element.population  5000000000
+
+  });
 }
 
 //=============================================================================
@@ -130,9 +153,13 @@ halveAll(numsArray); ==> [ 1, 3, 10, 4, 7 ]
 
 Note: please write one or two lines here describing your solution.
 */
+//it s gonna itterate over the array and divide each elemnt by 2 and than using the map function its going return a new array with the new values for us 
 
 function halveAll(numbers) {
   // your code is here
+  return map(numbers , function(element ){
+    return element / 2 ;
+  });
 }
 
 //=============================================================================
@@ -149,6 +176,11 @@ Note: please write one or two lines here describing your solution.
 */
 function values(obj) {
   // TODO: your code here
+  var array = [];
+  each(obj , function(element, key) {
+    array.push(element)
+  });
+  return array ; 
 }
 
 //Good Luck :))
